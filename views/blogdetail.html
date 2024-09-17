@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Content Management</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Write a Blog</h2>
+        <form id="blogForm">
+            <div class="form-group mb-3">
+                <label for="title">Blog Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="content">Blog Content</label>
+                <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="categories">Select Categories</label>
+                <select multiple class="form-control" id="categories" name="categories[]" required>
+                    <option value="science_and_tech">Science and Tech</option>
+                    <option value="politics_and_geopolitics">Politics and Geopolitics</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="sports">Sports</option>
+                    <option value="fun_facts">Fun Facts</option>
+                </select>
+                <small class="form-text text-muted">Hold Ctrl (or Cmd) to select multiple categories</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="/js/blogdetail.js"></script>
+</body>
+
+</html>
