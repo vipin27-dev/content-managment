@@ -10,8 +10,8 @@ exports.createComment = async (req, res) => {
       author: req.user._id,
     });
     await comment.save();
-    res.redirect(`/blog/${blogId}`);
+    res.status(201).json({ message: "Comment added successfully", comment });
   } catch (error) {
-    res.status(400).send("Error adding comment");
+    res.status(400).json({ error: "Error adding comment" });
   }
 };
